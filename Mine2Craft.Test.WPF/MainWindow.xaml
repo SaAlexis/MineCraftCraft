@@ -9,9 +9,8 @@
         Title="MainWindow" Height="720" Width="1080">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\sa_12\Desktop\Formation .NET\Visual Studio\Mine2Craft.Test\Mine2Craft.Test.WPF\Image\minecrafWall.jpg"/>
+            <ImageBrush ImageSource="/Image/minecrafWall.jpg"/>
         </Grid.Background>
-
         <ContentControl x:Name="ContentControl" Content="{Binding Navigator.CurrentContentControl}"/>
     </Grid>
 </Window>

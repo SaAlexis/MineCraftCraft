@@ -19,15 +19,16 @@
             </Button.Background>
         </Button>
 
-        <StackPanel Width="300">
+        <StackPanel Width="275">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.5*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="55" />
+                    <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="1" Grid.Column="0">
@@ -43,7 +44,16 @@
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Name}" HorizontalAlignment="Center"/>
                 </Grid>
                 <Image Grid.Column="1" Width="55" Height="55" Source="/Image/minecrafWall.jpg"></Image>
-                <Button Grid.Column="2" Width="55" Height="55" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFAD0000"/>
+                <Button Content="DEL" Grid.Column="3" Width="24" Height="54" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFAD0000" BorderBrush="#FFAD0000" FlowDirection="LeftToRight" UseLayoutRounding="False" FontStretch="Normal" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-2"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
             </Grid>
         </StackPanel>
     </Grid>

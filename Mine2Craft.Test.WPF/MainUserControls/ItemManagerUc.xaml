@@ -18,7 +18,7 @@
                 </WrapPanel.Background>
                 <Label Content="List des Items" Margin="0,20,0,20" HorizontalAlignment="Center" Height="50" Width="275" VerticalAlignment="Center" FontSize="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"></Label>
 
-                <ListBox x:Name="LbElement" ItemsSource="{Binding ItemsList.Items}" SelectedItem="{Binding ItemsList.CurrentItem}" Width="275" Height="630" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Left" Foreground="White">
+                <ListBox x:Name="lbItem" ItemsSource="{Binding ItemsList.Items}" SelectedItem="{Binding ItemsList.CurrentItem}" Width="275" Height="630" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Left" Foreground="White" SelectionChanged="lbItem_SelectionChanged">
                     <ListBox.Background>
                         <SolidColorBrush Color="Black" Opacity="0"/>
                     </ListBox.Background>
@@ -49,7 +49,7 @@
                                         <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Name}" HorizontalAlignment="Center"/>
                                     </Grid>
                                     <Image Grid.Column="1" Width="55" Height="55" Source="/Image/minecrafWall.jpg"></Image>
-                                    <Button Grid.Column="3" Width="55" Height="55" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFAD0000" Click="Button_Click_Delete" BorderBrush="#FFAD0000"></Button>
+                                    <Button x:Name="button_Delete" Content="DEL" Grid.Column="3" Width="20" Height="55" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFAD0000" Click="Button_Click_Delete" BorderBrush="#FFAD0000"/>
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
@@ -59,7 +59,7 @@
 
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="100" Margin="0,0,0,0">
 
-                <Label Content="ITEM MANAGER" Width="632" Height="106" FontSize="65" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="Black"/>
+                <Label Content="ITEM MANAGER" Width="632" Height="106" FontSize="60" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="Black"/>
                 <Button Margin="70,10,0,10" Content="Back" Height="50" Width="80" Click="Button_Click_Back" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             </StackPanel>
@@ -68,11 +68,12 @@
 
 
             <StackPanel Width="350" DataContext="{Binding ItemsList.CurrentItem}">
-                <Grid Margin="10,75,10,0">
+                <Grid Margin="10,70,10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -82,16 +83,23 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Label Grid.Row="1" Foreground="White" FontSize="20">Name</Label>
-                    <TextBox x:Name="tbNameItem" Grid.Row="2" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,30" FontSize="20" Height="35" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
-
+                    <TextBox x:Name="tbNameItem" Grid.Row="2" Text="{Binding Name}" Margin="0,0,0,30" FontSize="20" Height="35" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+                    <!--, UpdateSourceTrigger=PropertyChanged-->
                     <Label Grid.Row="3" Foreground="White" FontSize="20">Description</Label>
-                    <TextBox x:Name="tbDescItem" Grid.Row="4" Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,30" FontSize="20" Height="35" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="tbDescItem" Grid.Row="4" Text="{Binding Description}" Margin="0,0,0,30" FontSize="20" Height="35" VerticalContentAlignment="Center" />
 
-                    <CheckBox  Grid.Row="5" Margin="0" IsChecked="{Binding IsCooked}" Height="35" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="24" Foreground="White" >Can be cooked</CheckBox>
-                    <CheckBox Grid.Row="6" Margin="0,20,0,0" IsChecked="{Binding IsCombustible}" Height="35" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="24" Foreground="White" >Can be used as fuel</CheckBox>
+                    <Viewbox Grid.Row="5" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,30">
+                        <RadioButton x:Name="rbCooked" GroupName="GrItem" IsChecked="{Binding IsCooked}" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Padding="5,-4,0,0" Foreground="White" >Can be cooked</RadioButton>
+                    </Viewbox>
+                    <Viewbox Grid.Row="6" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,30">
+                        <RadioButton x:Name="rbCombustible" GroupName="GrItem" IsChecked="{Binding IsCombustible}" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Padding="5,-4,0,0" Foreground="White" >Can be used at fuel</RadioButton>
+                    </Viewbox>
+                    <Viewbox Grid.Row="7" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <RadioButton x:Name="rbNull" GroupName="GrItem" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Padding="5,-4,0,0" Foreground="White" >Nothing</RadioButton>
+                    </Viewbox>
                 </Grid>
 
-                <Grid Margin="0,75,0,0">
+                <Grid Margin="0,60,0,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
@@ -100,8 +108,9 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Button Content="ADD" Grid.Column="0" Grid.Row="1" Height="40" Width="150" Click="Button_Click_Add"></Button>
-                    <Button Content="DELETE" Grid.Column="1" Grid.Row="1" Height="40" Width="150"></Button>
+                    <Button x:Name="btAdd" Visibility="Visible" Content="ADD" Grid.Column="0" Grid.Row="1" Height="40" Width="150" Click="Button_Click_Add"></Button>
+                    <Button x:Name="btUpdate" Visibility="Hidden" Content="UPDATE" Grid.Column="0" Grid.Row="1" Height="40" Width="150" Click="Button_Click_Update"></Button>
+                    <Button x:Name="btReset" Content="RESET" Grid.Column="1" Grid.Row="1" Height="40" Width="150" Click="Button_Click_Reset"></Button>
                 </Grid>
             </StackPanel>
         </DockPanel>
