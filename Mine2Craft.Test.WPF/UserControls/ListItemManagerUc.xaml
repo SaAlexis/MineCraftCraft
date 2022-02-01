@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Mine2Craft.Test.WPF.UserControls.ListItemManagerUc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mine2Craft.Test.WPF.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="250">
+    <Grid>
+        <WrapPanel DockPanel.Dock="Left" Width="250">
+            <WrapPanel.Background>
+                <SolidColorBrush Color="Black" Opacity="0.75"/>
+            </WrapPanel.Background>
+            <Label Content="List des Items" Margin="0,20,0,20" HorizontalAlignment="Center" Height="50" Width="250" VerticalAlignment="Center" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"></Label>
+
+            <ListBox x:Name="LbElement" ItemsSource="{Binding ItemsList}" Height="630" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" Foreground="White">
+                <ListBox.Background>
+                    <SolidColorBrush Color="Black" Opacity="0"/>
+                </ListBox.Background>
+            </ListBox>
+        </WrapPanel>
+    </Grid>
+</UserControl>

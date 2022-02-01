@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine2Craft.Test.API", "Mine2Craft.Test.API\Mine2Craft.Test.API.csproj", "{C9911254-BD6C-4D5F-86F1-F7FB428EDC9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine2Craft.Test.WPF", "Mine2Craft.Test.WPF\Mine2Craft.Test.WPF.csproj", "{F6330899-4638-4971-B206-6EC72E85CEF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine2Craft.Test.Persistance", "Mine2Craft.Test.Persistance\Mine2Craft.Test.Persistance.csproj", "{9955DF47-7E62-47B1-B70F-79C57023EFBB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine2Craft.Test.Models", "Mine2Craft.Test.Models\Mine2Craft.Test.Models.csproj", "{34162573-279E-4870-8D98-2E9013B5497B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine2Craft.Test.Entities", "Mine2Craft.Test.Entities\Mine2Craft.Test.Entities.csproj", "{7BD8DDCC-DED6-4374-B773-163A907ED44F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{80E5ADF7-23AE-4EA9-8B55-1B1BD7B10933}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{6A8B7CEC-35E7-4134-A808-B9C342C8E116}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{BF3A7843-4D1D-43BB-A320-03FC459E2862}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BDD", "BDD", "{67E879E3-CF4A-4F56-977B-07099508D77B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine2Craft.Test.Dtos", "Mine2Craft.Test.Dtos\Mine2Craft.Test.Dtos.csproj", "{8C20EC67-F593-4EA9-BB57-3EC4CB47F8B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{69C38CC4-2D9E-4ABD-8F83-FCCEA95486C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine2Craft.Test.MsTest", "Mine2Craft.Test.MsTest\Mine2Craft.Test.MsTest.csproj", "{3C99CA25-C5FA-4C40-9940-079A20DDD464}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine2Craft.Test.ClientRequestApiData", "Mine2Craft.Test.ClientRequestApiData\Mine2Craft.Test.ClientRequestApiData.csproj", "{288CEBAB-5C29-4502-81F4-CE3ED64A03BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9911254-BD6C-4D5F-86F1-F7FB428EDC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9911254-BD6C-4D5F-86F1-F7FB428EDC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9911254-BD6C-4D5F-86F1-F7FB428EDC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9911254-BD6C-4D5F-86F1-F7FB428EDC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6330899-4638-4971-B206-6EC72E85CEF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6330899-4638-4971-B206-6EC72E85CEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6330899-4638-4971-B206-6EC72E85CEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6330899-4638-4971-B206-6EC72E85CEF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9955DF47-7E62-47B1-B70F-79C57023EFBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9955DF47-7E62-47B1-B70F-79C57023EFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9955DF47-7E62-47B1-B70F-79C57023EFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9955DF47-7E62-47B1-B70F-79C57023EFBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34162573-279E-4870-8D98-2E9013B5497B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34162573-279E-4870-8D98-2E9013B5497B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34162573-279E-4870-8D98-2E9013B5497B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34162573-279E-4870-8D98-2E9013B5497B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD8DDCC-DED6-4374-B773-163A907ED44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD8DDCC-DED6-4374-B773-163A907ED44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD8DDCC-DED6-4374-B773-163A907ED44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD8DDCC-DED6-4374-B773-163A907ED44F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C20EC67-F593-4EA9-BB57-3EC4CB47F8B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C20EC67-F593-4EA9-BB57-3EC4CB47F8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C20EC67-F593-4EA9-BB57-3EC4CB47F8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C20EC67-F593-4EA9-BB57-3EC4CB47F8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C99CA25-C5FA-4C40-9940-079A20DDD464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C99CA25-C5FA-4C40-9940-079A20DDD464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C99CA25-C5FA-4C40-9940-079A20DDD464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C99CA25-C5FA-4C40-9940-079A20DDD464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288CEBAB-5C29-4502-81F4-CE3ED64A03BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288CEBAB-5C29-4502-81F4-CE3ED64A03BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288CEBAB-5C29-4502-81F4-CE3ED64A03BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288CEBAB-5C29-4502-81F4-CE3ED64A03BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C9911254-BD6C-4D5F-86F1-F7FB428EDC9C} = {6A8B7CEC-35E7-4134-A808-B9C342C8E116}
+		{F6330899-4638-4971-B206-6EC72E85CEF2} = {80E5ADF7-23AE-4EA9-8B55-1B1BD7B10933}
+		{9955DF47-7E62-47B1-B70F-79C57023EFBB} = {BF3A7843-4D1D-43BB-A320-03FC459E2862}
+		{34162573-279E-4870-8D98-2E9013B5497B} = {BF3A7843-4D1D-43BB-A320-03FC459E2862}
+		{7BD8DDCC-DED6-4374-B773-163A907ED44F} = {67E879E3-CF4A-4F56-977B-07099508D77B}
+		{8C20EC67-F593-4EA9-BB57-3EC4CB47F8B6} = {BF3A7843-4D1D-43BB-A320-03FC459E2862}
+		{3C99CA25-C5FA-4C40-9940-079A20DDD464} = {69C38CC4-2D9E-4ABD-8F83-FCCEA95486C0}
+		{288CEBAB-5C29-4502-81F4-CE3ED64A03BE} = {80E5ADF7-23AE-4EA9-8B55-1B1BD7B10933}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55556B50-35C6-4727-AF5D-55AF4AD0B728}
+	EndGlobalSection
+EndGlobal

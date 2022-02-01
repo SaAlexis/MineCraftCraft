@@ -1,0 +1,17 @@
+﻿<Window xmlns:MainUserControls="clr-namespace:Mine2Craft.Test.WPF.MainUserControls"  
+        x:Class="Mine2Craft.Test.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mine2Craft.Test.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1080">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\sa_12\Desktop\Formation .NET\Visual Studio\Mine2Craft.Test\Mine2Craft.Test.WPF\Image\minecrafWall.jpg"/>
+        </Grid.Background>
+
+        <ContentControl x:Name="ContentControl" Content="{Binding Navigator.CurrentContentControl}"/>
+    </Grid>
+</Window>
