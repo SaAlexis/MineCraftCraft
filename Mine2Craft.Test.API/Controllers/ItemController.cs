@@ -48,15 +48,40 @@ namespace Mine2Craft.Test.API.Controllers
         }
 
         // PUT api/<ItemController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("{guid}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(500)]
+        public IActionResult Put(Guid guid, [FromBody] ItemDto itemDto)
         {
+            try
+            {
+                var itemEntity = _mapper.Map<ItemEntity>(itemDto);
+                var updateEntity = _itemRepository.Update(itemEntity);
+                if (updateEntity == false)
+                    return NotFound();
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500);
+            }
         }
 
         // DELETE api/<ItemController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{guid}")]
+        [ProducesResponseType(typeof(bool), 200)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(500)]
+        public IActionResult Delete(Guid guid)
         {
+            var response = _itemRepository.Delete(guid);
+            if (response == null) 
+                return NotFound();
+            if (response == true) 
+                return Ok();
+
+            return StatusCode(500);
         }
     }
 }

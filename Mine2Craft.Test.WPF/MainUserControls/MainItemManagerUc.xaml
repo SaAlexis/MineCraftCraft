@@ -9,7 +9,7 @@
     <Grid>
         <DockPanel LastChildFill="False">
             <DockPanel.Background>
-                <ImageBrush ImageSource="C:\Users\sa_12\Desktop\Formation .NET\Visual Studio\Mine2Craft.Test\Mine2Craft.Test.WPF\Image\minecrafWall.jpg"/>
+                <ImageBrush ImageSource="/Image/minecrafWall.jpg"/>
             </DockPanel.Background>
 
             <UserControls:ListItemManagerUc />

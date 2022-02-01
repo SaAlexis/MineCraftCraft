@@ -7,5 +7,9 @@
         Task<IEnumerable<TModel>> GetAll();   
 
         Task Add(TModel model);
+
+        Task Delete(Guid guid);
+
+        Task Update(TModel model, Guid guid);
     }
 }

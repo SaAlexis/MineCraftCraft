@@ -33,5 +33,24 @@ namespace Mine2Craft.Test.ClientRequestApiData
             var dto = Mapper.Map<TDto>(model); 
             await HttpClient.PostAsJsonAsync(Uri,dto);
         }
+
+        public async Task Delete(Guid guid)
+        {
+            string sguid = "/" + guid.ToString();
+            var uriDelete = new Uri(Uri + sguid);
+            await HttpClient.DeleteAsync(uriDelete);
+        }
+
+        public async Task Update(TModel model, Guid guid)
+        {
+            
+            var dto = Mapper.Map<TDto>(model);
+
+
+            string sguid = "/" + guid.ToString();
+            var uriUpdate = new Uri(Uri + sguid);
+
+            await HttpClient.PutAsJsonAsync(uriUpdate, dto);
+        }
     }
 }
